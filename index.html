@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="れおん隊公式サイトへようこそ！Discordで一緒に盛り上がろう。">
+  <meta name="keywords" content="Discord, サーバー, コミュニティ, れおん隊, 仲間募集, イベント">
+  <meta name="author" content="れおん隊公式">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <title>れおん隊 - 公式サイト</title>
+</head>
+<body>
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>れおん隊 Discordサーバー</h1>
+      <p>一緒に盛り上がろう！楽しい雑談や特別イベントであなたも仲間入り。</p>
+      <a href="https://discord.gg/あなたの招待リンク" class="cta-button">今すぐ参加</a>
+    </div>
+  </header>
+  <section class="about-section">
+    <h2 data-animate="fadeInUp">れおん隊とは？</h2>
+    <p data-animate="fadeInUp">れおん隊は、気軽に交流できるコミュニティとして作られたDiscordサーバーです。</p>
+    <p data-animate="fadeInUp">雑談だけでなく、ゲーム、イベント、特別な企画も盛りだくさん！</p>
+    <p data-animate="fadeInUp">興味がある方はぜひお気軽に参加してください。</p>
+  </section>
+  <section class="features-section">
+    <h2 data-animate="zoomIn">サーバーの特徴</h2>
+    <div class="features-container">
+      <div class="feature-item" data-animate="slideInLeft">
+        <div class="feature-icon">🎉</div>
+        <h3>イベント多数</h3>
+        <p>定期的に開催される楽しいイベントで、仲間と盛り上がろう！</p>
+      </div>
+      <div class="feature-item" data-animate="zoomIn">
+        <div class="feature-icon">🛡️</div>
+        <h3>安心安全</h3>
+        <p>専用のBotで荒らしを対策し、安心して利用できる環境を提供。</p>
+      </div>
+      <div class="feature-item" data-animate="slideInRight">
+        <div class="feature-icon">🤝</div>
+        <h3>コミュニティ重視</h3>
+        <p>初心者からベテランまで誰でも歓迎！温かい仲間が待っています。</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 れおん隊. All rights reserved.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('[data-animate]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animate);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      animateElements.forEach((el) => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
